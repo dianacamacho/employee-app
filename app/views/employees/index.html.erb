@@ -1,0 +1,24 @@
+<h1>Employee Index</h1>
+
+<% @employees.each do |employee| %>
+<h4>First Name: <%= employee.first_name %></h4>
+<h4>Middle Name: <%= employee.middle_name %></h4>
+<h4>Last Name: <%= employee.last_name %></h4>
+<h4>Email: <%= employee.email %></h4>
+<h4>Job Title: <%= employee.job_title %></h4>
+<h4>Salary: <%= employee.salary %></h4>
+<h4>Phone: <%= employee.japan_phone_number %></h4>
+<h4>Gender: <%= employee.gender %></h4>
+<h4>Bio: <%= employee.bio %></h4>
+
+<a id="index-edit-button" data-confirm="Are you sure you want to edit the employee information?" href="/employees/<%= employee.id %>/edit" class="btn btn-default btn-sm active" role="button">Edit</a>
+
+<a id="index-new-button" data-confirm="Create new employee entry?" href="/employees/new" role="button" class="btn btn-default btn-sm active">Add New Employee</a>
+
+<a id="index-delete-button" data-confirm="Are you sure you want to delete employee?" data-method="delete" href="/employees/<%= employee.id %>" rel="nofollow" role="button" class="btn btn-default btn-sm active">Delete</a>
+
+<hr>
+
+<% end %>
+
+
